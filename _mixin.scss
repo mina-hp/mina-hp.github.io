@@ -1,0 +1,256 @@
+@mixin parent_width() {
+  @media screen and (min-width: 1440px) {
+    .part-project {
+      gap: 90px !important;
+      & > figure {
+        width: 20%;
+        img {
+          width: 400px;
+          height: 400px;
+        }
+      }
+      figcaption {
+        width: 400px;
+      }
+    }
+  }
+  @media screen and (max-width: 1622px) {
+    .part-project {
+      gap: 130px;
+      figure {
+        width: 20%;
+        img {
+          width: 250px;
+          height: 250px;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    .part-project {
+      gap: $spacing * 6;
+    }
+  }
+  @media screen and (max-width: 1440px) {
+    .part-project {
+      gap: $spacing * 8;
+    }
+  }
+
+  @media screen and (max-width: 1230px) {
+    .part-project {
+      gap: 20px;
+      & > figure {
+        width: 25%;
+        img {
+          width: 280px;
+          height: 280px;
+        }
+      }
+      figcaption {
+        width: 280px;
+      }
+    }
+  }
+  @media screen and (max-width: 1080px) {
+    .part-project {
+      gap: 90px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .form-group {
+      padding-bottom: $spacing * 4;
+    }
+    .part-project {
+      gap: $spacing * 3;
+    }
+
+    .article {
+      gap: $spacing * 10;
+      & > div {
+        width: 35%;
+      }
+    }
+
+    .part-project {
+      gap: 90px;
+      & > figure {
+        width: 32%;
+        img {
+          width: 320px;
+          height: 320px;
+        }
+      }
+      figcaption {
+        width: 320px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    .article > div {
+      width: 94%;
+    }
+    .footer-section::after,
+    .back {
+      height: 1000px;
+    }
+   
+
+    .des-left,
+    .des-right {
+      width: 100% !important;
+    }
+    .des-left {
+      padding-bottom: $spacing * 8;
+    }
+    .des-container {
+      gap: 10px !important;
+      width: 96% !important;
+    }
+    // .contact{
+    //   width: 99% !important;
+    // }
+    .contact-box{
+     width:  99% !important;}
+
+    .footer-left,
+    .right {
+      width: 90% !important;
+    }
+    .footer-section::after,
+    .back {
+      min-height: 1000px;
+    }
+    .button-box {
+      margin-bottom: 20px;
+    }
+
+    .part-project {
+      & > figure {
+        margin-bottom: 100px;
+        width: 90%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      figcaption {
+        width: 100%;
+      }
+    }
+    header {
+      padding-right: $spacing * 2;
+      padding-left: $spacing * 2;
+      &.sticky {
+        padding-right: $spacing * 2;
+        padding-left: $spacing * 2;
+      }
+    }
+  }
+
+  @media screen and (max-width: 570px) {
+    .footer-section::after,
+    .back {
+      height: 1000px;
+    }
+    .name {
+      font-size: $spacing * 4 !important;
+      top: 150px;
+      & > span {
+        font-size: $spacing * 3 !important;
+      }
+    }
+  }
+  @media screen and (max-width: 495px){
+    .footer-section::after,
+    .back {
+      height: 1100px;
+    }
+  }
+  @media screen and (max-width: 370px) {
+    .footer-section::after,
+    .back {
+      height: 1300px;
+    }
+    .des-container {
+      width: 96% !important;
+    }
+  }
+  @media screen and (max-width: 300px) {
+    .footer-section::after,
+    .back {
+      height: 1200px;
+    }
+    .des-container {
+      width: 99% !important;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .toggle-button-lable {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .nav-list {
+      position: fixed;
+      width: 100%;
+      height: 50vh;
+      background-color: $primary-text-color;
+      top: -100%;
+      right: 0;
+      bottom: 0;
+      z-index: 99;
+      display: block;
+      padding-top: 30px;
+      padding-left: 30px;
+      transition: right 0.4s;
+    }
+    .nav-links {
+      display: block;
+      padding: 0;
+      & > li {
+        margin-bottom: 24px;
+      }
+    }
+    .nav-list a::after {
+      display: none;
+    }
+    .active {
+      color: $lo-color !important;
+    }
+    .nav-list a:not(.active) {
+      color: $base-color;
+    }
+    #toggle-button:checked ~ .nav-list {
+      top: 0;
+    }
+    #toggle-button:checked + .toggle-button-lable::before {
+      opacity: 0;
+    }
+    #toggle-button:checked + .toggle-button-lable > span {
+      transform: rotate(45deg) translate(5px, 10px);
+    }
+    #toggle-button:checked + .toggle-button-lable::after {
+      transform: rotate(-45deg) translateY(-5px);
+    }
+  }
+}
+
+@mixin flex_wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@mixin flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin before_absolute {
+  content: "";
+  display: block;
+  position: absolute;
+}

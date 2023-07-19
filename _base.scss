@@ -1,0 +1,41 @@
+html,
+body {
+  font-size: 16px;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: "Work Sans", Arial, sans-serif;
+  // color: $base-color;
+}
+body {
+  min-height: 200vh;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+li {
+  list-style-type: none;
+}
+h3 {
+  font-size: $spacing * 5;
+  padding-bottom: $spacing;
+}
+h4 {
+  font-size: $spacing * 3;
+}
+h5 {
+  color: $primary-text-color;
+  font-size: $spacing * 2;
+}
+
+p,
+span {
+  color: $secondary-text-color;
+  font-size: $spacing * 2;
+}
+.section2,
+.section1,
+.section3,
+.section4 {
+  padding-top: 80px;
+}
